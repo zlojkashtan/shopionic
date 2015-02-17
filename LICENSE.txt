@@ -1,0 +1,5 @@
+/* Copyright (C) Oceanhouse21 GmbH - All Rights Reserved
+ * Unauthorized copying of this file, via any medium is strictly prohibited
+ * Proprietary and confidential
+ * Written by Georg Schlenkhoff <georg@oceanhouse21.com>, Nobember, 2014
+ */
