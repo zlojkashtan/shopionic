@@ -48,7 +48,7 @@ var sendMail = function (req, res) {
 };
 
 app.use(express.static(FOLDER_PREFIX + 'dist'));
-app.get('/contact', function(req, res, next) {
+app.get('/contact', function(req, res) {
   sendMail(req, res);
 });
 
