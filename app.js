@@ -27,10 +27,10 @@ var options = {
 var mailer = nodemailer.createTransport(sgTransport(options));
 
 var sendMail = function (req, res) {
-  mailOptions.to = req.params.email + ', ' + CONTACT_REQUEST;
+  mailOptions.to = req.query.email + ', ' + CONTACT_REQUEST;
   mailOptions.from = CONTACT_REQUEST;
   mailOptions.subject = 'SHOPIONIC - coming soon ...';
-  mailOptions.html = '<h1>Hallo ' + req.params.email + ',</h1><br>Wir halten Dich auf dem Laufenden!<br><br>Das SHOPIONIC Team';
+  mailOptions.html = '<h1>Hallo ' + req.query.email + ',</h1><br>Wir halten Dich auf dem Laufenden!<br><br>Das SHOPIONIC Team';
   mailOptions.text = "Bitte nutzen Sie ein modernes Mail-Programm, z.B. Outlook, um den Inhalt dieser Nachricht korrekt darzustellen.";
   if (SENDGRID_USERNAME !== 'NO_MAIL') { // only send when sendgrid is configured
     mailer.sendMail(mailOptions, function (error, info) {
